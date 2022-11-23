@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DigSignForDEO.ESignDemonstrationPage"
+             Title="ESignDemonstrationPage">
+    <ScrollView>
+        
+    <VerticalStackLayout>
+            <Label 
+            Text="Демонстрація роботи електронного підпису"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontSize="24"/>
+        <VerticalStackLayout
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            MinimumWidthRequest="600"
+            Margin="10"
+            Padding="5">
+            <Editor Placeholder="Введіть текст для підписання" x:Name="DocumentTextEntry"
+                    Margin="0"
+                    HeightRequest="150"/>
+            <Button Text="Підписати"
+                    Clicked="SignButtonClicked"/>
+        </VerticalStackLayout>
+        <VerticalStackLayout
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Margin="10"
+            Padding="5"
+            MinimumWidthRequest="600">
+            <Editor Placeholder="Тут буде вміст підписаного тексту"
+                   Margin="10"
+                   x:Name="SignedTextOutput"
+                   HeightRequest="150"
+                   />
+            <Button Text="Перевірити підпис"
+                    Clicked="CheckSignButtonClicked"
+                    Margin="10"/>
+            <Label Text="Підпис підтверджено" TextColor="LimeGreen" HorizontalOptions="Center" IsVisible="false"
+                   x:Name="SignIsApprovedMessage"/>
+            <Label Text="Підпис не підтверджено" TextColor="OrangeRed" HorizontalOptions="Center" IsVisible="false"
+                   x:Name="SignIsNotApprovedMessage"/>
+        </VerticalStackLayout>
+    </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

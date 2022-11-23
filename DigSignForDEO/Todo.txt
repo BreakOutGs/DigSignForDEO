@@ -1,0 +1,11 @@
+﻿
+TODO LIST:
+1.Get Data
+2. Get Hash of data
+3. Encrypt Hash of data by password from chosed certificate
+4. Add hash and other certificate info to document and save it.
+5. Get signed document with data
+6. Check sign from Documnet:
+	6.1 Get hash of data from document but not certifictate info
+	6.2 Get hash by decrypt encrypted hash
+	6.3 Compare them, if equal->document checked, else fail.

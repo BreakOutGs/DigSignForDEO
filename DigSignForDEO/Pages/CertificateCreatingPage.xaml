@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DigSignForDEO.CertificateCreatingPage"
+             Title="CertificateCreatingPage">
+    <HorizontalStackLayout
+        HorizontalOptions="Center">
+        
+            
+        <VerticalStackLayout
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Margin="10"
+            Padding="10">
+
+        <Label 
+            Text="Створення сертифіката"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            FontSize="24"/>
+            
+            <HorizontalStackLayout
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                Margin="10"
+                Padding="5">
+    
+                <Label Text="Ім'я власника сертифікату:"
+                       VerticalTextAlignment="Center"/>
+                <Entry Text="Василь" x:Name="FirstNameEntry"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                Margin="10"
+                Padding="5">
+
+                <Label Text="Прізвище власника сертифікату:"
+                       VerticalTextAlignment="Center"/>
+                <Entry Text="Динчук" x:Name="SecondNameEntry"/>
+            </HorizontalStackLayout>
+            <Button Text="Додати новий сертифікат"
+                    Clicked="AddCertificateButtonClicked"/>
+        </VerticalStackLayout>
+        <VerticalStackLayout VerticalOptions="Center"
+                             HorizontalOptions="Center"
+                             IsVisible="false"
+                             x:Name="CertificateInfoContainer">
+            <Label Text="" x:Name="CertificateInfoLabel"/>
+        </VerticalStackLayout>
+    </HorizontalStackLayout>
+</ContentPage>
